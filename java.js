@@ -6,7 +6,8 @@ changeBtn.addEventListener('click', changeCur);
 
 function changeCur(e){
 	const currencyName = document.querySelector('.currency-name').innerText;
-	console.log(currencyName);
+    console.log(currencyName);
+    changeCurrName('UAN');
 	if(e.target.innerText === 'USD' &&  currencyName === 'UAN'){
 		prices.forEach(price => {
 		 price.innerHTML =  (+price.innerText / 26).toFixed(2);
